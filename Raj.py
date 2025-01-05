@@ -1,7 +1,15 @@
+import os
 import telebot
 import requests
 from telebot import types
 from flask import Flask, request
+
+# List of required packages
+required_packages = ['telebot', 'requests', 'Flask']
+
+# Install missing packages
+for package in required_packages:
+    os.system(f'pip install {package}')
 
 API_TOKEN = '7700765492:AAH62P0CN-IaECNza3m0wxUzz7PWcx9L2Zw'
 bot = telebot.TeleBot(API_TOKEN)
